@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  go_test:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - $PWD:/go/src/github.com/felipemarques/form3-challenge-go-app

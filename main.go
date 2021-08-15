@@ -9,7 +9,7 @@ import (
 	"os"
 )
 
-const ENDPOINT string = "http://localhost:8080/v1"
+const ENDPOINT string = "http://192.168.1.100:8080/v1"
 
 func main() {
 
