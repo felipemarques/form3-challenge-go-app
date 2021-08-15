@@ -1,4 +1,4 @@
-package models
+package model
 
 import (
 	"log"
@@ -52,8 +52,8 @@ func (a *AccountData) setOrganisationID(organisationID string) {
 	a.OrganisationID = organisationID
 }
 
-func (e *AccountData) getOrganisationID() string {
-	return e.OrganisationID
+func (a *AccountData) getOrganisationID() string {
+	return a.OrganisationID
 }
 
 // Type
@@ -61,8 +61,8 @@ func (a *AccountData) setType(myType string) {
 	a.Type = myType
 }
 
-func (e *AccountData) getType() string {
-	return e.Type
+func (a *AccountData) getType() string {
+	return a.Type
 }
 
 // Version

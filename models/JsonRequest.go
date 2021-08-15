@@ -1,4 +1,4 @@
-package models
+package model
 
 type JsonRequest struct {
 	Data *AccountData `json:"data"`

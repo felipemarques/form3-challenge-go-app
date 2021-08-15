@@ -2,12 +2,13 @@ package main
 
 import (
 	"bytes"
-	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
+
+	model "github.com/felipemarques/form3-challenge-go-app/model"
 )
 
 const ENDPOINT string = "http://localhost:8080/v1"
@@ -54,40 +55,40 @@ func getOrganizationAccounts() {
 
 func createOrganisationAccount() {
 
-	attributes := new(AccountAttributes)
+	attributes := new(model.AccountAttributes)
 	attributes.setClassification("Personal")
-	attributes.setAccountNumber("10000004")
+	//attributes.setAccountNumber("10000004")
 
 	// var alternativeNames [2]string
 	// alternativeNames[0] = "My Alternative Name 1"
 	// alternativeNames[1] = "My Alternative Name 2"
 	//attributes.setAlternativeNames(alternativeNames[:])
 	//attributes.setAlternativeNames([]string{"My Alternative name1","name2"})
-	attributes.setAlternativeNames(nil)
+	// attributes.setAlternativeNames(nil)
 
-	attributes.setBankID("400302")
-	attributes.setBankIDCode("GBDSC")
-	attributes.setBaseCurrency("GBP")
-	attributes.setBic("NWBKGB42")
-	attributes.setCountry("GB")
-	attributes.setIban("GB28NWBK40030212764204")
-	attributes.setName([]string{"Organisation Name Test"})
+	// attributes.setBankID("400302")
+	// attributes.setBankIDCode("GBDSC")
+	// attributes.setBaseCurrency("GBP")
+	// attributes.setBic("NWBKGB42")
+	// attributes.setCountry("GB")
+	// attributes.setIban("GB28NWBK40030212764204")
+	// attributes.setName([]string{"Organisation Name Test"})
 
-	account := new(AccountData)
-	account.setID("")
-	account.setOrganisationID("eb0bd6f5-c3f5-44b2-b677-acd23cdde73c")
-	account.setType("accounts")
-	account.setAttributes(*attributes)
+	// account := new(AccountData)
+	// account.setID("")
+	// account.setOrganisationID("eb0bd6f5-c3f5-44b2-b677-acd23cdde73c")
+	// account.setType("accounts")
+	// account.setAttributes(*attributes)
 
-	jsonRequest := new(JsonRequest)
-	jsonRequest.setData(*account)
+	// jsonRequest := new(JsonRequest)
+	// jsonRequest.setData(*account)
 
-	jsonRequestMarshal, err := json.Marshal(jsonRequest)
-	if err != nil {
-		log.Fatalln(err)
-	}
+	// jsonRequestMarshal, err := json.Marshal(jsonRequest)
+	// if err != nil {
+	// 	log.Fatalln(err)
+	// }
 
-	postRequest("/organisation/accounts", jsonRequestMarshal)
+	// postRequest("/organisation/accounts", jsonRequestMarshal)
 	
 }
 
