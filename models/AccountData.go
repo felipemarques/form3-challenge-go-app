@@ -6,6 +6,14 @@ import (
 	"github.com/google/uuid"
 )
 
+type AccountDataRequest struct {
+	Data *AccountData `json:"data"`
+}
+
+func (a *AccountDataRequest) SetData(accountData AccountData) {
+	a.Data = &accountData
+}
+
 // Account represents an account in the form3 org section.
 // See https://api-docs.form3.tech/api.html#organisation-accounts for
 // more information about fields.
@@ -17,17 +25,21 @@ type AccountData struct {
 	Version        *int64             `json:"version,omitempty"`
 }
 
+func New() *AccountData {
+	return &AccountData{}
+}
+
 // Attributes
-func (a *AccountData) setAttributes(attributes AccountAttributes){
+func (a *AccountData) SetAttributes(attributes AccountAttributes){
 	a.Attributes = &attributes
 }
 
-func (a *AccountData) getAttributes() AccountAttributes {
+func (a *AccountData) GetAttributes() AccountAttributes {
 	return *a.Attributes
 }
 
 //ID
-func (a *AccountData) setID(id string) AccountData {
+func (a *AccountData) SetID(id string) AccountData {
 	if (id == "") {
 
 		myGuid, err := uuid.NewRandom()
@@ -43,33 +55,33 @@ func (a *AccountData) setID(id string) AccountData {
 	return *a
 }
 
-func (a *AccountData) getID() string {
+func (a *AccountData) GetID() string {
 	return a.ID
 }
 
 // OrganisationID
-func (a *AccountData) setOrganisationID(organisationID string) {
+func (a *AccountData) SetOrganisationID(organisationID string) {
 	a.OrganisationID = organisationID
 }
 
-func (a *AccountData) getOrganisationID() string {
+func (a *AccountData) GetOrganisationID() string {
 	return a.OrganisationID
 }
 
 // Type
-func (a *AccountData) setType(myType string) {
+func (a *AccountData) SetType(myType string) {
 	a.Type = myType
 }
 
-func (a *AccountData) getType() string {
+func (a *AccountData) GetType() string {
 	return a.Type
 }
 
 // Version
-func (a *AccountData) setVersion(version int64) {
+func (a *AccountData) SetVersion(version int64) {
 	a.Version = &version
 }
 
-func (a *AccountData) getVersion() int64 {
+func (a *AccountData) GetVersion() int64 {
 	return *a.Version
 }

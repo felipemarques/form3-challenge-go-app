@@ -23,136 +23,136 @@ func NewAccountAttributes() *AccountAttributes {
 }
 
 // AccountClassification
-func (a AccountAttributes) setClassification(classification string) {
+func (a *AccountAttributes) SetClassification(classification string) {
 	a.AccountClassification = &classification
 }
 
-func (a AccountAttributes) getClassification() string {
+func (a *AccountAttributes) GetClassification() string {
 	return *a.AccountClassification
 }
 
 // AccountMatchingOptOut
-func (a AccountAttributes) setMatchingOptOut(matchingOptOut bool) {
+func (a *AccountAttributes) SetMatchingOptOut(matchingOptOut bool) {
 	a.AccountMatchingOptOut = &matchingOptOut
 }
 
-func (a AccountAttributes) getMatchingOptOut() bool {
+func (a *AccountAttributes) GetMatchingOptOut() bool {
 	return *a.AccountMatchingOptOut
 }
 
 // AccountNumber
-func (a AccountAttributes) setAccountNumber(accountNumber string) {
+func (a *AccountAttributes) SetAccountNumber(accountNumber string) {
 	a.AccountNumber = accountNumber
 }
 
-func (a AccountAttributes) getAccountNumber() string {
+func (a *AccountAttributes) GetAccountNumber() string {
 	return a.AccountNumber
 }
 
 // AlternativeNames
-func (a AccountAttributes) setAlternativeNames(names []string) {
+func (a *AccountAttributes) SetAlternativeNames(names []string) {
 	a.AlternativeNames = names
 }
 
-func (a AccountAttributes) getAlternativeNames() []string {
+func (a *AccountAttributes) GetAlternativeNames() []string {
 	return a.AlternativeNames
 }
 
 // BankID
-func (a AccountAttributes) setBankID(bankId string) {
+func (a *AccountAttributes) SetBankID(bankId string) {
 	a.BankID = bankId
 }
 
-func (e AccountAttributes) getBankID() string {
+func (e AccountAttributes) GetBankID() string {
 	return e.BankID
 }
 
 // BankIDCode
-func (a AccountAttributes) setBankIDCode(bankIdCode string) {
+func (a *AccountAttributes) SetBankIDCode(bankIdCode string) {
 	a.BankIDCode = bankIdCode
 }
 
-func (e AccountAttributes) getBankIDCode() string {
+func (e AccountAttributes) GetBankIDCode() string {
 	return e.BankIDCode
 }
 
 // BaseCurrency
-func (a AccountAttributes) setBaseCurrency(currency string) {
+func (a *AccountAttributes) SetBaseCurrency(currency string) {
 	a.BaseCurrency = currency
 }
 
-func (a AccountAttributes) getBaseCurrency() string {
+func (a *AccountAttributes) GetBaseCurrency() string {
 	return a.BaseCurrency
 }
 
 // Bic
-func (a AccountAttributes) setBic(bic string) {
+func (a *AccountAttributes) SetBic(bic string) {
 	a.Bic = bic
 }
 
-func (a AccountAttributes) getBic() string {
+func (a *AccountAttributes) GetBic() string {
 	return a.Bic
 }
 
 // Country
-func (a AccountAttributes) setCountry(country string){
+func (a *AccountAttributes) SetCountry(country string){
 	a.Country = &country
 }
 
-func (a AccountAttributes) getCountry() string {
+func (a *AccountAttributes) GetCountry() string {
 	return *a.Country
 }
 
 // Iban
-func (a AccountAttributes) setIban(iban string) {
+func (a *AccountAttributes) SetIban(iban string) {
 	a.Iban = iban
 }
 
-func (a AccountAttributes) getIban() string {
+func (a *AccountAttributes) GetIban() string {
 	return a.Iban
 }
 
 // JointAccount
-func (a AccountAttributes) setJointAccount(jointAccount bool) {
+func (a *AccountAttributes) SetJointAccount(jointAccount bool) {
 	a.JointAccount = &jointAccount
 }
 
-func (a AccountAttributes) getJointAccount() bool {
+func (a *AccountAttributes) GetJointAccount() bool {
 	return *a.JointAccount
 }
 
 // Name
-func (a AccountAttributes) setName(names []string) {
+func (a *AccountAttributes) SetName(names []string) {
 	a.Name = names
 }
 
-func (a AccountAttributes) getName() []string {
+func (a *AccountAttributes) GetName() []string {
 	return a.Name
 }
 
 // SecondaryIdentification
-func (a AccountAttributes) setSecondaryIdentification(identification string) {
+func (a *AccountAttributes) SetSecondaryIdentification(identification string) {
 	a.SecondaryIdentification = identification
 }
 
-func (a AccountAttributes) getSecondaryIdentification() string {
+func (a *AccountAttributes) GetSecondaryIdentification() string {
 	return a.SecondaryIdentification
 }
 
 // Status
-func (a AccountAttributes) setStatus(status string){
+func (a *AccountAttributes) SetStatus(status string){
 	a.Status = &status
 }
 
-func (a AccountAttributes) getStatus() string {
+func (a *AccountAttributes) GetStatus() string {
 	return *a.Status
 }
 
 // Switched
-func (a AccountAttributes) setSwitched(switched bool) {
+func (a *AccountAttributes) SetSwitched(switched bool) {
 	a.Switched = &switched
 }
 
-func (a AccountAttributes) getSwitched() bool {
+func (a *AccountAttributes) GetSwitched() bool {
 	return *a.Switched
 }
