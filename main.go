@@ -56,7 +56,9 @@ func getOrganizationAccounts() {
 func createOrganisationAccount() {
 
 	attributes := new(model.AccountAttributes)
-	attributes.setClassification("Personal")
+
+	println(attributes)
+	//attributes.setClassification("Personal")
 	//attributes.setAccountNumber("10000004")
 
 	// var alternativeNames [2]string
