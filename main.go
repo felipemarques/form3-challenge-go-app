@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"os"
 
-	model "github.com/felipemarques/form3-challenge-go-app/model"
+	model "github.com/felipemarques/form3-challenge-go-app/models"
 )
 
 const ENDPOINT string = "http://localhost:8080/v1"
