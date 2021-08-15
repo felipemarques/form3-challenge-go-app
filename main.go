@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"os"
 
-	model "github.com/felipemarques/form3-challenge-go-app/models"
+	"github.com/felipemarques/form3-challenge-go-app/entities"
 )
 
 const ENDPOINT string = "http://localhost:8080/v1"
@@ -16,7 +16,7 @@ const ENDPOINT string = "http://localhost:8080/v1"
 func main() {
 
 	//getOrganizationAccounts()	
-	//createOrganisationAccount()
+	createOrganisationAccount()
 	//fetchOrganisationAccount()
 	//deleteOrganisationAccount()
 }
@@ -55,9 +55,17 @@ func getOrganizationAccounts() {
 
 func createOrganisationAccount() {
 
-	attributes := new(model.AccountAttributes)
+	account := new(entities.Account)
+	account.setTitle("teste")
 
-	println(attributes)
+	fmt.Println(account)
+
+	//attributes := new(model.AccountAttributes)
+	//attributes := model.NewAccountAttributes()
+
+	//attributes.setClassification("Personal")
+
+	//fmt.Println(attributes.AccountClassification)
 	//attributes.setClassification("Personal")
 	//attributes.setAccountNumber("10000004")
 

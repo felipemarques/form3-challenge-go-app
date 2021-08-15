@@ -18,6 +18,10 @@ type AccountAttributes struct {
 	Switched                *bool    `json:"switched,omitempty"`
 }
 
+func NewAccountAttributes() *AccountAttributes {
+	return &AccountAttributes{}
+}
+
 // AccountClassification
 func (a AccountAttributes) setClassification(classification string) {
 	a.AccountClassification = &classification

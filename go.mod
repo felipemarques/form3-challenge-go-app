@@ -1,4 +1,4 @@
-module github.com/felipemarques/form3-challenge-go-app
+module form3
 
 go 1.14
 
